@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Casestudy: Alive Festival, en mobile first webapp med program, kort og billetter. Research, analyse, design, test og resultat.">
+    <title>Alive Festival | Rune Lejbølle</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Kilde: Font Awesome 7.0.1 (ikoner), hentet fra cdnjs.cloudflare.com. Skrifttyper (Poppins, Inter, Caveat) er fra Google Fonts og hentes i style.css. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="./assets/js/app.js" defer></script>
+</head>
+
+<body>
+    <header class="sideHoved">
+        <div class="bredde">
+            <a class="logo" href="index.html"><span>Rune Lejbølle<small>Human-centered digital design</small></span><i class="fa-solid fa-leaf"></i></a>
+            <nav class="menu"><a href="index.html">Forside</a><a href="kompetencer.html">Kompetencer</a><div class="dropDown"><a href="casestudies.html" class="aktiv">Casestudy<i class="fa-solid fa-chevron-down"></i></a><div class="underMenu"><a href="aliveFestival.html">Alive Festival</a><a href="hjorring_jiu_jitsu.html">Hjørring Jiu-Jitsu</a><a href="lejbol_bryghus.html">Lejb’øl Bryghus</a></div></div><a href="omMig.html">Om mig</a><a href="kontakt.html">Kontakt</a></nav>
+        </div>
+    </header>
+    <main>
+
+        <section class="bredde sideTop">
+            <div>
+                <a class="tilbage" href="casestudies.html"><i class="fa-solid fa-arrow-left"></i> Tilbage til casestudies</a>
+                <p class="overLinje">Case 01 · Gruppeprojekt · Webapp</p>
+                <h1>Alive <span class="guld">Festival</span></h1>
+                <p class="ingress">En mobile first webapp, hvor festivalgæster kan finde program, kort, billetter og praktisk information samlet ét sted.</p>
+                <div class="tags"><span>UX / UI design</span><span>Webapp</span><span>Mobile first</span></div>
+                <div class="knapper"><a class="knap" href="https://github.com/Carolineelisabeth-ceh/Alive-festival-gruppe4" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Se koden på GitHub</a></div>
+            </div>
+            <div class="skaerm"><div class="ramme"><img class="skarm" src="./assets/img/a-app-index.webp" alt="Den færdige Alive-webapp på en mobil: forsiden med Dette sker nu"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><div class="ramme"><img class="skarm" src="./assets/img/a-app-min.webp" alt="Den færdige Alive-webapp på en mobil: Min festival med gemte favoritter"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div></div>
+        </section>
+
+        <section class="bredde sektion">
+            <div class="toKolonner">
+                <article class="kort"><h3>Projektets udgangspunkt</h3><p>Projektet er lavet på 2. semester i modulet Webapp, og vi var fire i gruppen. Opgaven var at lave en webapp til Alive Festival, som man kan bruge på mobilen både før og midt i festivalen. Derfor er alt bygget mobile first.</p></article>
+                <article class="kort"><h3>Fokusområder</h3><ul class="liste"><li>Overblik med “Dette sker nu”</li><li>Program og egne favoritter</li><li>Kort over festivalen</li><li>Billetter og praktisk information</li><li>Mobile first og store trykflader</li></ul></article>
+            </div>
+        </section>
+
+        <section class="bredde sektion">
+            <p class="overLinje">Alive Festival / Projektproces</p>
+            <h2>Sådan blev appen til</h2>
+            <div class="faner"><button class="fane"><b>01</b>Research</button><button class="fane"><b>02</b>Analyse</button><button class="fane"><b>03</b>Idé & retning</button><button class="fane"><b>04</b>Design</button><button class="fane"><b>05</b>Prototype & test</button><button class="fane"><b>06</b>Resultat</button></div>
+            <div class="trin">
+                <div>
+                    <p class="overLinje roed">01 / Forstå gæsterne og festivalen</p>
+                    <h2>Research</h2>
+                    <p>Vi startede med at undersøge, hvem der tager til Alive, og hvad de har brug for, når de står på en festivalplads med telefonen i hånden. Vi segmenterede målgruppen både demografisk og psykografisk og lavede ud fra det to personas: Kasper på 23, der bor i kollektiv i Aalborg og overvejer at tage afsted alene, og Maja på 26, der læser kommunikation og gerne vil vide, hvad der sker og hvornår, uden at planlægge sig ihjel.</p><p>Til hver persona skrev vi to scenarier: et før festivalen (“Kan jeg overskue det her?” og “Jeg vil gerne have ro i hovedet”) og et under festivalen (“Det er rart ikke at føle sig dum” og “Hvad var det nu, jeg glædede mig til?”).</p>
+                    <h4>Hvorfor?</h4><p>Vi ville tage udgangspunkt i brugerne og ikke i det visuelle. Scenarierne viste, hvornår appen skal bruges, og hvad man skal kunne finde hurtigt.</p>
+                    <h4>Metode og arbejde</h4><p class="arbejde">Segmentering · Personas · Scenarier · Mobilbrug</p>
+                </div>
+                <div>
+                    <div class="sand"><p class="overLinje roed">Output</p><p>En segmentering og to personas med hver deres behov. Kasper vil føle sig tryg og vide, hvornår bussen kører. Maja vil have sit eget program samlet ét sted.</p></div>
+                    
+                </div>
+                <div class="billeder lodret"><figure class="fig bred"><img src="./assets/img/a-segmentering.webp" alt="Demografisk og psykografisk segmentering af Alive Festivals målgruppe på gule og blå post-its"><figcaption>Segmentering af målgruppen</figcaption></figure></div>
+                <div class="billeder"><figure class="fig dok"><img src="./assets/img/a-persona-kasper.webp" alt="Persona for Kasper på 23 år, en nysgerrig førstegangsbesøgende på Alive Festival, med behov og scenarier"><figcaption>Persona: Kasper, den nysgerrige førstegangsbesøgende</figcaption></figure><figure class="fig dok"><img src="./assets/img/a-persona-maja.webp" alt="Persona for Maja på 26 år, der vil have overblik over programmet, med behov og scenarier"><figcaption>Persona: Maja, den bevidste oplevelsessamler</figcaption></figure></div>
+            </div>
+            <div class="trin">
+                <div>
+                    <p class="overLinje roed">02 / Samle og prioritere indsigter</p>
+                    <h2>Analyse</h2>
+                    <p>Vi samlede alt det indhold, vi kunne komme i tanke om, i et affinity diagram og sorterede det i grupper som Festivalen, Praktiske oplysninger, Kort, Favoritter, Musik, Kunst og Udflugter.</p>
+                    <h4>Hvorfor?</h4><p>Så vi kunne se, hvad der hører sammen, og hvad der skal være nemmest at finde i appen.</p>
+                    <h4>Metode og arbejde</h4><p class="arbejde">Brainstorm · Braindump · Affinity diagram</p>
+                </div>
+                <div>
+                    <div class="sand"><p class="overLinje roed">Output</p><p>Et overblik over indholdet, sorteret i grupper.</p></div>
+                    
+                </div>
+                <div class="billeder lodret"><figure class="fig bred"><img src="./assets/img/a-braindump.webp" alt="Braindump med blå og røde post-its over indhold til Alive-appen, fx program, billetter og camping"><figcaption>Braindump</figcaption></figure><figure class="fig bred"><img src="./assets/img/a-affinity.webp" alt="Affinity diagram hvor indholdet til Alive-appen er sorteret i grupper som Festivalen, Kort, Favoritter, Musik og Kunst"><figcaption>Affinity diagram</figcaption></figure></div>
+            </div>
+            <div class="trin">
+                <div>
+                    <p class="overLinje roed">03 / Fra indsigt til første struktur</p>
+                    <h2>Idé & retning</h2>
+                    <p>Ud fra indholdet lavede vi et content sitemap, så vi kunne se, hvordan appens sider hænger sammen. Så besluttede vi, at forsiden skal svare på ét spørgsmål: Hvad sker der nu? Resten af appen ligger i en menu i bunden med Program, Kort, Hjem, Favoritter og Mere, så den minder om apps, man kender i forvejen.</p><p>Vi tegnede lo-fi wireframes til forsiden og siderne med cards, hvor kasserne bare viser, hvor video, billeder, tekst og knapper skal ligge.</p>
+                    <h4>Hvorfor?</h4><p>Med lo-fi wireframes kan man tale om placering uden at hænge fast i farver og billeder.</p>
+                    <h4>Metode og arbejde</h4><p class="arbejde">Content sitemap · Wireframes · Mobile first · Menu i bunden · Cards</p>
+                </div>
+                <div>
+                    <div class="sand"><p class="overLinje roed">Output</p><p>Et content sitemap og en fælles struktur, som vi alle kunne designe videre ud fra.</p></div>
+                    
+                </div>
+                <div class="billeder lodret"><figure class="fig bred"><img src="./assets/img/a-sitemap.webp" alt="Content sitemap for Alive-appen med forside, program, kort, Min festival og praktiske oplysninger"><figcaption>Content sitemap</figcaption></figure></div>
+                <div class="billeder"><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-wire-forside.webp" alt="Lo-fi wireframe af Alive-appens forside med video, overskrift og cards"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Wireframe: forsiden</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-wire-cards.webp" alt="Lo-fi wireframe af en liste med cards i Alive-appen"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Wireframe: liste med cards</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-wire-sitemap.webp" alt="Lo-fi wireframe af en side med video og mere information i Alive-appen"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Wireframe: sider med mere information</figcaption></figure></div>
+            </div>
+            <div class="trin">
+                <div>
+                    <p class="overLinje roed">04 / Struktur, UI og identitet</p>
+                    <h2>Design</h2>
+                    <p>Vi lavede mockups til alle skærmene. Mørkegrøn og lysegul er grundfarverne, og pink bruges til cards i programmet, så det føles som en festival. Håndtegnede illustrationer og Alive-logoet går igen på tværs af siderne.</p><p>Alt er lavet til mobil med store trykflader og korte tekster, fordi man ofte står midt i en menneskemængde, når man åbner appen.</p>
+                    <h4>Hvorfor?</h4><p>Et ensartet udtryk gør appen nem at gennemskue, også når man har travlt eller kigger på skærmen i solen.</p>
+                    <h4>Metode og arbejde</h4><p class="arbejde">Mockups · Farver · Illustrationer · Mobile first</p>
+                </div>
+                <div>
+                    <div class="sand"><p class="overLinje roed">Output</p><p>Et samlet design til forside, program, kort, billetter, favoritter og praktisk information.</p></div>
+                    
+                </div>
+                <div class="billeder"><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-mock-forside.webp" alt="Mockup af Alive-appens forside med overskriften Dette sker nu og cards med de næste koncerter"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Forside: Dette sker nu</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-mock-lineup.webp" alt="Mockup af Alive-appens side med årets line-up og billeder af kunstnere"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Årets line-up</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-mock-program.webp" alt="Mockup af programsiden i Alive-appen med faner og pink cards"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Program</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-mock-min.webp" alt="Mockup af Min festival i Alive-appen med personligt program og favoritter"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Min festival</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-mock-praktisk.webp" alt="Mockup af Praktiske oplysninger i Alive-appen med menupunkter som Bliv frivillig og Transport og camping"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Praktiske oplysninger</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-mock-billetter.webp" alt="Mockup af billetsiden i Alive-appen med festival- og campingbilletter"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Billetter</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-mock-kort.webp" alt="Mockup af kortet over Alive Festival-området"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Kort over festivalen</figcaption></figure></div>
+            </div>
+            <div class="trin">
+                <div>
+                    <p class="overLinje roed">05 / Afprøv og forbedr</p>
+                    <h2>Prototype & test</h2>
+                    <p>Vi lavede en think aloud test, hvor en testbruger skulle løse opgaver i appen og sige sine tanker højt undervejs. Opgaverne var fx at købe en billet, finde årets line-up, tilføje noget til sine favoritter og finde ud af, hvordan man bliver frivillig.</p><p>Vi testede også, om man kunne finde kortet over festivalen, og om man kunne se, hvad der sker lige nu.</p>
+                    <h4>Hvorfor?</h4><p>Test viser, hvor designet ikke virker, mens det stadig er nemt at ændre.</p>
+                    <h4>Metode og arbejde</h4><p class="arbejde">Think aloud · Fokuspunkter · Opgaver · Observation</p>
+                </div>
+                <div>
+                    <div class="sand"><p class="overLinje roed">Output</p><p>Et testforløb med klare opgaver, som viste, om man kan finde rundt uden hjælp.</p></div>
+                    
+                </div>
+                <div class="billeder"><figure class="fig dok"><img src="./assets/img/a-testbruger.webp" alt="Dokument med fokuspunkter og opgaver til think aloud-testen af Alive-appen"><figcaption>Fokuspunkter og opgaver til think aloud</figcaption></figure></div>
+            </div>
+            <div class="trin">
+                <div>
+                    <p class="overLinje roed">06 / Den færdige webapp</p>
+                    <h2>Resultat</h2>
+                    <p>Resultatet er en webapp i HTML, CSS og JavaScript, bygget mobile first. På forsiden kan man se, hvad der sker nu, og køb en billet. I Program kan man skifte mellem musik, kunst og udflugter og gemme sine favoritter, som samles i Min festival.</p><p>Kortet viser scener, madboder og udflugter, og billetsiden samler festival-, camping-, udflugts- og transportbilletter.</p>
+                    <h4>Hvorfor?</h4><p>Vi ville se, om appen passede til Kasper og Maja, som vi havde designet den til.</p>
+                    <h4>Metode og arbejde</h4><p class="arbejde">HTML · CSS · JavaScript · Mobile first</p>
+                </div>
+                <div>
+                    <div class="sand"><p class="overLinje roed">Output</p><p>En webapp, hvor gæsterne hurtigt får overblik over program, kort, billetter og praktisk information.</p></div>
+                    
+                </div>
+                <div class="billeder"><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-app-index.webp" alt="Den færdige Alive-webapp på en mobil: forsiden med Dette sker nu"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Forsiden</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-app-program.webp" alt="Den færdige Alive-webapp på en mobil: programsiden"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Program</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-app-min.webp" alt="Den færdige Alive-webapp på en mobil: Min festival med gemte favoritter"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Min festival</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-app-kort.webp" alt="Den færdige Alive-webapp på en mobil: kortet over festivalen"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Kort</figcaption></figure><figure class="fig mobil"><div class="ramme"><img class="skarm" src="./assets/img/a-app-billetter.webp" alt="Den færdige Alive-webapp på en mobil: billetsiden"><img class="rammeBillede" src="./assets/img/ramme.png" alt=""></div><figcaption>Billetter</figcaption></figure></div>
+            </div>
+        </section>
+
+        <section class="bredde sektion">
+            <div class="afslutning">
+                <p class="overLinje">Min rolle og refleksion</p>
+                <h2>En app, der giver ro på festivalpladsen</h2>
+                <p>Vi arbejdede i gruppen med personas, struktur, design, test og kode.</p>
+                <p>Det vigtigste, vi tog med os, er at starte i brugerne og tænke mobilen først. Når man bygger til en telefon, bliver man tvunget til at prioritere, og det gjorde appen mere overskuelig. Vi kunne godt tænke os at teste med flere brugere og lade favoritterne blive gemt, så de stadig er der næste gang man åbner appen.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="bredde">
+            <a class="logo" href="index.html"><span>Rune Lejbølle<small>Human-centered digital design</small></span><i class="fa-solid fa-leaf"></i></a>
+            <div class="kolonne">
+                <h4>Portfolio</h4>
+                <a href="index.html">Forside</a>
+                <a href="kompetencer.html">Kompetencer</a>
+                <a href="casestudies.html">Casestudies</a>
+                <a href="omMig.html">Om mig</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+            <div class="kolonne">
+                <h4>Find mig</h4>
+                <a href="https://www.linkedin.com/in/rune-lejb%C3%B8lle" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/Runerasch" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
+            </div>
+            <div class="kolonne">
+                <h4>Kontakt</h4>
+                <a href="mailto:rasch1994@gmail.com"><i class="fa-solid fa-envelope"></i>rasch1994@gmail.com</a>
+                <a href="tel:+4528128677"><i class="fa-solid fa-phone"></i>+45 28 12 86 77</a>
+            </div>
+            <small>© 2026 Rune Lejbølle</small>
+        </div>
+    </footer>
+<div class="stor"><img alt="Forstørret billede"></div>
+</body>
+
+</html>

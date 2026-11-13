@@ -1,0 +1,403 @@
+/* Kilde: skrifttyperne Poppins, Inter og Caveat er fra Google Fonts (fonts.google.com) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Caveat:wght@600&display=swap");
+
+/* Variabler: farver, fonte, størrelser og skygger ligger her, så de kun skal rettes ét sted */
+:root {
+    --creme: #f6f0e1;
+    --papir: #fbf8ef;
+    --skov: #194638;
+    --gron: #315f53;
+    --sage: #e9eddf;
+    --sand: #e6cf9f;
+    --guld: #c8a96b;
+    --rod: #c54a2c;
+    --gra: #55615a;
+
+    --fontOverskrift: "Poppins", sans-serif;
+    --fontBrod: "Inter", sans-serif;
+    --fontHaand: "Caveat", cursive;
+
+    --h1: 80px;
+    --h2: 50px;
+    --h3: 30px;
+    --h4: 22px;
+    --pStr: 20px;
+
+    --skygge: 6px 6px 0 var(--skov);
+    --skyggeLille: 3px 3px 0 var(--skov);
+    --rund: 12px;
+    --rundStor: 16px;
+    --kant: 3px solid var(--skov);
+    --lysTekst: #dbe3d4;
+}
+
+/* Fonte: overskrifter og brødtekst */
+h1, h2, h3, h4, .logo { font-family: var(--fontOverskrift); }
+body, p, li, button, input, textarea, small { font-family: var(--fontBrod); }
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 30px; }
+body { min-width: 1400px; background: var(--creme); color: #202820; font-size: var(--pStr); line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+button { font-size: inherit; cursor: pointer; }
+ul { padding-left: 24px; }
+li { margin-bottom: 6px; }
+h1, h2, h3, h4 { color: var(--skov); line-height: 1.12; }
+h1 { font-size: var(--h1); letter-spacing: -2.5px; margin-bottom: 26px; }
+h2 { font-size: var(--h2); letter-spacing: -1.5px; margin-bottom: 14px; }
+h3 { font-size: var(--h3); margin-bottom: 10px; }
+h4 { font-size: var(--h4); margin-bottom: 8px; }
+p { margin-bottom: 14px; }
+b { font-weight: 600; }
+
+/* Små hjælpeklasser, der bruges på mange sider */
+.bredde { width: 1320px; margin: 0 auto; }
+.sektion { padding: 56px 0; }
+.guld { color: var(--guld); }
+.roed { color: var(--rod); }
+.dempet, .liste { color: var(--gra); }
+.skovTekst { color: var(--skov); }
+.sand { background: var(--sand); }
+.moerk { background: var(--skov); color: var(--creme); }
+/* Tekst på mørke bokse er lys */
+.moerk h2, .moerk h3, .infoBoks h3, .caseKort h3, .nysgerrig h4, .maal h3 { color: var(--creme); }
+.moerk p, .infoBoks p, .caseKort p, .nysgerrig p { color: var(--lysTekst); }
+.polstret { padding: 44px; }
+.fremhaevet { padding: 40px; border-radius: 16px; background: var(--guld); rotate: 1deg; }
+.fremhaevet h3 { font-size: 32px; }
+.luftig { line-height: 1.5; }
+.smal { max-width: 900px; }
+.top20 { margin-top: 20px; }
+.overLinje { margin-bottom: 14px; color: var(--gron); font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.ingress { max-width: 700px; font-size: 22px; }
+.titel { margin-bottom: 36px; }
+.titel p { max-width: 760px; color: var(--gra); }
+.tilbage { display: inline-block; margin-bottom: 22px; color: var(--gron); font-weight: 600; }
+.tilbage:hover { text-decoration: underline; }
+.tags { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.tags span + span::before { content: "·"; margin-right: 12px; }
+
+/* Kolonner: bruges til alle sektioner med flere felter ved siden af hinanden */
+.toKolonner, .treKolonner, .fireKolonner, .stak { display: grid; gap: 26px; }
+.toKolonner { grid-template-columns: repeat(2, 1fr); }
+.treKolonner { grid-template-columns: repeat(3, 1fr); }
+.fireKolonner { grid-template-columns: repeat(4, 1fr); }
+.midt { align-items: center; }
+.luft { gap: 70px; align-items: start; }
+.skaev { grid-template-columns: 1.1fr .9fr; }
+.stak { gap: 22px; align-content: start; }
+
+/* Sidehoved og menu */
+.sideHoved { background: var(--gron); color: var(--creme); }
+.sideHoved .bredde { display: flex; align-items: center; justify-content: space-between; height: 120px; }
+.logo { display: flex; align-items: center; gap: 14px; font-size: 36px; font-weight: 700; line-height: 1; }
+.logo small { display: block; margin-top: 8px; font-size: 16px; font-style: italic; font-weight: 400; opacity: .85; }
+.logo i { color: #e5a94a; font-size: 46px; transform: rotate(-8deg); }
+.menu { display: flex; gap: 4px; padding: 8px; border: var(--kant); border-radius: 50px; background: var(--creme); box-shadow: var(--skyggeLille); }
+.menu a { display: block; padding: 12px 26px; border: 2px solid transparent; border-radius: 40px; color: var(--skov); font-weight: 600; }
+.menu a:hover, .menu .aktiv { background: var(--guld); border-color: var(--gron); }
+.menu a i { margin-left: 6px; font-size: 14px; }
+.dropDown { position: relative; }
+.underMenu { display: none; position: absolute; top: 100%; left: 0; width: 290px; margin-top: 16px; padding: 8px; border: var(--kant); border-radius: var(--rund); background: var(--creme); box-shadow: var(--skygge); z-index: 50; }
+.underMenu::before { content: ""; position: absolute; left: 0; right: 0; top: -20px; height: 20px; }
+.dropDown:hover .underMenu, .dropDown:focus-within .underMenu { display: block; }
+
+/* Øverste del af siderne */
+.sideTop { display: grid; grid-template-columns: 1.1fr .9fr; gap: 100px; align-items: center; padding: 80px 0 60px; }
+.kontaktTop { grid-template-columns: 1fr 440px; gap: 80px; }
+.sideTop > div > p { max-width: 640px; font-size: 22px; }
+
+/* Billeder: portræt og skærme */
+/* Portræt som polaroid: hvid ramme, lidt skævt, med et stykke tape i toppen */
+.portraet { position: relative; padding: 16px 16px 76px; border: 1px solid #e3d9c0; background: #fff; rotate: 2deg; }
+.portraet.venstre { rotate: -2deg; }
+.portraet::before { content: ""; position: absolute; top: -16px; left: 50%; width: 120px; height: 34px; margin-left: -60px; background: rgba(200, 169, 107, .75); rotate: -3deg; }
+.portraet img { display: block; width: 100%; height: 560px; object-fit: cover; }
+.portraet .haand { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; }
+.kontaktTop .portraet img { height: 400px; object-position: 29% center; }
+.kontaktTop .portraet { rotate: 1.5deg; }
+.skaerm { display: flex; align-items: center; justify-content: center; gap: 24px; min-height: 480px; border: var(--kant); border-radius: var(--rundStor); background: var(--skov); overflow: hidden; }
+.skaerm .ramme { width: 200px; }
+.skaerm > img.bredt { max-width: 88%; border-radius: 10px; }
+.afskaaret { width: 88%; height: 430px; object-fit: cover; object-position: top; }
+
+/* Knapper: samme farve, skygge og hover overalt */
+.knap, .pil, .forstoer, .fane { display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 16px 34px; border: 2px solid var(--gron); border-radius: 50px; background: var(--gron); color: var(--creme); font-weight: 600; box-shadow: var(--skyggeLille); transition: .25s; }
+.knap:hover, .pil:hover, .forstoer:hover { transform: translateY(-3px); border-color: var(--guld); background: var(--guld); color: var(--skov); box-shadow: var(--skygge); }
+.knap i { transition: transform .25s; }
+.knap:hover i { transform: translateX(5px); }
+.knapper { display: flex; gap: 18px; margin-top: 34px; }
+.handling { display: flex; justify-content: flex-end; margin-top: 30px; }
+
+/* Kort og ikoner: alle kort og ikoner genbruger de samme klasser */
+/* Skygge er kun på det, man kan klikke på. Kort uden link har ingen skygge. */
+a.kort, .caseKort, .kontaktKort, .infoBoks, .kompetence, .fig, .nysgerrig, .maal, .trin { box-shadow: var(--skygge); }
+.kort { display: block; padding: 34px; border: var(--kant); border-radius: var(--rund); background: var(--papir); }
+a.kort:hover { background: var(--sage); }
+.kort p { margin: 0; }
+.ikon { display: inline-grid; place-items: center; flex: none; width: 64px; height: 64px; border-radius: 50%; background: var(--sage); color: var(--gron); font-size: 28px; }
+.ikon i { line-height: 1; }
+.kort .ikon { margin-bottom: 18px; }
+.nummer { display: inline-grid; place-items: center; width: 46px; height: 46px; margin: 0 14px 18px 0; border-radius: 50%; background: var(--skov); color: var(--creme); font-size: 16px; font-weight: 600; }
+/* Kort uden skygge får i stedet et ikon, der skifter farve og vipper en smule */
+.kort:hover .ikon { background: var(--guld); color: var(--skov); transform: rotate(-8deg) scale(1.08); }
+.kort:hover .nummer { background: var(--guld); color: var(--skov); }
+.infoBoks { display: flex; align-items: center; gap: 22px; padding: 30px; border: var(--kant); border-radius: var(--rund); background: var(--gron); color: var(--creme); }
+.infoBoks.lodret { flex-direction: column; align-items: flex-start; padding: 40px; }
+.infoBoks.sendBoks { height: 168px; padding: 20px 30px; }
+.infoBoks i { color: var(--guld); font-size: 42px; }
+.infoBoks h3 { font-size: 26px; }
+.infoBoks p { margin: 0; }
+.kontaktKort { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; height: 168px; padding: 20px; border-radius: var(--rund); background: var(--gron); color: var(--creme); text-align: center; }
+.kontaktKort:hover { background: var(--skov); }
+.kontaktKort i { color: var(--guld); font-size: 38px; }
+.afslutning { padding: 50px; border: var(--kant); border-radius: var(--rundStor); background: var(--sage); }
+/* Afslutning på forsiden: teksten stopper halvvejs, og knappen står lige under */
+.opfordring { padding: 30px 0 40px; }
+.opfordring p { max-width: 640px; margin: 0 0 14px; }
+.opfordring .knap { margin-top: 18px; }
+
+/* Forsiden og casekort */
+.caseKort { display: flex; flex-direction: column; min-height: 440px; border-radius: var(--rundStor); background: var(--skov); color: var(--creme); overflow: hidden; }
+.caseBillede { display: block; width: 100%; height: 260px; object-fit: cover; object-position: top; border-bottom: 3px solid var(--guld); }
+.caseKort div { padding: 26px 32px 30px; }
+.caseKort span { color: var(--guld); font-weight: 600; }
+.udvalgt { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; padding: 50px; border: var(--kant); border-radius: var(--rundStor); }
+.udvalgt .ramme { width: 200px; }
+.telefoner { display: flex; justify-content: center; gap: 20px; }
+.kortBillede { display: block; width: 100%; height: 200px; margin-bottom: 20px; object-fit: cover; object-position: top; border: var(--kant); border-radius: 8px; }
+.meta { margin-bottom: 8px; font-size: 16px; font-weight: 600; color: var(--gron); }
+
+/* Kompetencer: åbne og lukke */
+.kompetence { margin-bottom: 16px; border: var(--kant); border-left: 12px solid var(--skov); border-radius: var(--rund); background: var(--papir); }
+.kompKnap { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 26px 32px; border: 0; background: none; text-align: left; }
+.kompKnap small { display: block; color: var(--gron); font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.kompKnap h3 { margin: 4px 0 0; }
+.kompKnap i { color: var(--gron); font-size: 26px; transition: transform .45s; }
+.kompIndhold { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+.kompIndhold > div { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; overflow: hidden; padding: 0 32px; }
+.kompIndhold p { color: var(--gra); }
+.kompetence.aaben .kompIndhold { grid-template-rows: 1fr; }
+.kompetence.aaben .kompIndhold > div { padding-bottom: 32px; }
+.kompetence.aaben .kompKnap i { transform: rotate(180deg); }
+
+/* Hover: alt det, der løfter sig eller skifter farve, bruger den samme hastighed */
+a.kort, .caseKort, .kontaktKort, .ikon, .nummer, .styrke, .vaerktoej, .maal li, .maalCases a, .prikker button { transition: .3s; }
+a.kort:hover, .caseKort:hover, .kontaktKort:hover, .styrke:hover, .maalCases a:hover { transform: translate(-4px, -4px); }
+
+/* Værktøjer og retning: lister med hover */
+.vaerktoej { display: flex; align-items: center; gap: 24px; padding: 18px 24px; border-bottom: var(--kant); }
+.vaerktoej:first-of-type { border-top: var(--kant); }
+.vaerktoej h4, .vaerktoej p { margin: 0; }
+.vaerktoej p { color: var(--gra); }
+.vaerktoej:hover { padding-left: 44px; background: var(--sage); }
+.vaerktoej:hover .ikon, .styrke:hover .ikon, .valg:hover .ikon { background: var(--guld); color: var(--skov); }
+.vaerktoej:hover .ikon { transform: rotate(-8deg) scale(1.08); }
+.skaev .dempet { margin-bottom: 30px; }
+.samarbejde { padding: 44px; border-radius: var(--rundStor); background: var(--sage); }
+.nysgerrig { display: flex; align-items: center; gap: 22px; margin-top: 20px; padding: 28px 34px; border-radius: 12px; background: var(--gron); color: var(--creme); }
+.nysgerrig .ikon { background: var(--sage); }
+.nysgerrig p { margin: 0; }
+.styrker { display: flex; gap: 34px; margin-top: 30px; }
+.styrke { display: flex; align-items: center; gap: 14px; font-weight: 600; color: var(--skov); }
+.maal { padding: 44px; border-radius: var(--rundStor); background: var(--skov); color: var(--creme); }
+.maal ul { padding: 0; list-style: none; }
+.maal li { display: flex; align-items: center; gap: 14px; padding: 10px 0; }
+.maal li i { color: var(--guld); }
+.maal .overLinje { margin-top: 26px; color: var(--guld); }
+.maalCases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.maalCases a { display: block; text-align: center; font-weight: 600; }
+.maalCases a:hover { color: var(--guld); }
+.maalCases img { display: block; width: 100%; height: 150px; margin-bottom: 8px; border: var(--kant); border-radius: 12px; object-fit: cover; object-position: top; }
+.maal li:hover { transform: translateX(10px); color: var(--guld); }
+
+/* Casesiderne: processen med seks faner */
+.faner { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 34px 0 24px; }
+.fane { justify-content: flex-start; gap: 12px; padding: 18px; border-color: var(--guld); border-radius: 10px; background: var(--papir); color: var(--skov); font-size: 19px; text-align: left; }
+.fane b { display: grid; place-items: center; flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--skov); color: var(--creme); font-size: 15px; }
+.fane:hover { background: var(--sage); }
+.fane.valgt { background: var(--skov); color: var(--creme); }
+.fane.valgt b { background: var(--guld); color: var(--skov); }
+.trin { display: none; grid-template-columns: 1fr 1fr; gap: 50px; padding: 44px; border: var(--kant); border-left: 12px solid var(--skov); border-radius: var(--rundStor); background: var(--papir); }
+.trin.valgt { display: grid; animation: ind .45s ease; }
+@keyframes ind { from { opacity: 0; transform: translateX(26px); } to { opacity: 1; transform: none; } }
+.trin h4 { margin-top: 26px; font-size: 16px; letter-spacing: 1px; text-transform: uppercase; color: var(--gra); }
+.trin .sand { padding: 22px 26px; border: var(--kant); border-radius: 10px; margin-bottom: 22px; }
+.trin .sand p { margin: 0; }
+.trin .arbejde { color: var(--gron); }
+.kilde { margin: 0; color: var(--gra); font-size: 16px; }
+.trin .sand + .knap { margin-bottom: 10px; }
+.trin > .billeder { grid-column: 1 / -1; }
+.valgListe { display: grid; gap: 16px; margin-top: 8px; }
+.valg { display: flex; align-items: center; gap: 18px; }
+.valg b { display: block; color: var(--skov); }
+.valg p { margin: 0; color: var(--gra); font-size: 18px; }
+
+/* Billeder i processen */
+.billeder { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; gap: 22px; }
+.billeder.lodret { flex-direction: column; align-items: stretch; }
+.billeder.lodret .kort { align-self: center; }
+.billeder.rad { flex-wrap: nowrap; }
+.fig { margin: 0; padding: 10px; border: var(--kant); border-radius: 8px; background: #fff; }
+.fig img { display: block; max-width: 100%; border-radius: 4px; cursor: zoom-in; }
+.fig figcaption { padding: 10px 6px 2px; color: var(--gra); font-size: 16px; font-weight: 600; text-align: center; }
+.fig figcaption i { margin-right: 6px; color: var(--gron); }
+.fig.telefon img { height: 480px; width: auto; }
+.fig.dok img { height: 560px; width: auto; }
+.fig.kort img { height: 300px; width: auto; }
+.billeder.rad .fig.kort img { height: 340px; }
+/* Mockups: hver side er en lang skærm, så vi viser toppen af hver. De ligger lidt skævt og forskudt som sider på et bord og rettes op, når man peger på dem */
+.fig.top { margin-bottom: 30px; transition: .3s; }
+.fig.top img { width: 196px; height: 370px; object-fit: cover; object-position: top; }
+.fig.top:nth-child(odd) { rotate: -1.5deg; }
+.fig.top:nth-child(even) { rotate: 1.5deg; translate: 0 26px; }
+.fig.top:hover { rotate: 0deg; translate: 0 -8px; }
+.fig.bred img { width: 100%; max-height: 640px; object-fit: contain; }
+.fig.mobil { padding: 0; border: 0; background: none; box-shadow: none; }
+.stor { display: none; position: fixed; inset: 0; z-index: 120; overflow: auto; padding: 40px; background: rgba(12, 30, 24, .94); cursor: zoom-out; }
+.stor.aaben { display: block; }
+.stor img { display: block; max-width: 1100px; width: 100%; margin: 0 auto; border-radius: 10px; background: #fff; }
+
+/* Mobilramme: skærmbilledet ligger bag rammen */
+.ramme { position: relative; width: 250px; }
+.rammeBillede { display: block; width: 100%; position: relative; z-index: 2; pointer-events: none; }
+.ramme .skarm { position: absolute; z-index: 1; left: 4.4%; top: 1.5%; width: 91.7%; height: 96.8%; object-fit: cover; object-position: top; border-radius: 12% / 5.5%; background: #fff; padding-top: 11.5%; cursor: zoom-in; }
+
+/* Om mig: billedshow */
+.galleri { position: relative; }
+.vindue { overflow: hidden; border: var(--kant); border-radius: var(--rundStor); background: var(--skov); }
+.spor { display: flex; transition: transform .7s cubic-bezier(.6, 0, .2, 1); }
+.flyt1 { transform: translateX(-100%); }
+.flyt2 { transform: translateX(-200%); }
+.flyt3 { transform: translateX(-300%); }
+.flyt4 { transform: translateX(-400%); }
+.flyt5 { transform: translateX(-500%); }
+.billede { flex: 0 0 100%; position: relative; height: 520px; }
+.billede img { width: 100%; height: 100%; object-fit: cover; }
+.billede:nth-child(1) img { object-position: 60% 40%; }
+.billede:nth-child(3) img { object-position: 45% center; }
+.billede:nth-child(6) img { object-position: center 28%; }
+.billede figcaption { position: absolute; left: 24px; bottom: 24px; padding: 8px 20px; border-radius: 30px; background: var(--creme); color: var(--skov); font-weight: 600; }
+.pil { position: absolute; top: 50%; width: 60px; height: 60px; padding: 0; margin-top: -30px; z-index: 2; }
+.venstre { left: 18px; }
+.hoejre { right: 18px; }
+.forstoer .luk, .fuldSkaerm .forstoer .udvid { display: none; }
+.fuldSkaerm .forstoer .luk { display: inline; }
+.forstoer { position: absolute; top: 18px; right: 18px; width: 56px; height: 56px; padding: 0; z-index: 3; }
+.prikker { display: flex; justify-content: center; gap: 12px; margin-top: 18px; }
+.prikker button { width: 14px; height: 14px; padding: 0; border: 2px solid var(--gron); border-radius: 50%; background: none; }
+.prikker button.valgt { width: 40px; border-radius: 10px; background: var(--gron); }
+.galleri.fuldSkaerm { position: fixed; inset: 0; z-index: 99; padding: 40px 80px; background: rgba(12, 30, 24, .97); }
+.fuldSkaerm .vindue, .fuldSkaerm .billede { height: calc(100vh - 140px); }
+.fuldSkaerm .vindue { border: 0; }
+.fuldSkaerm .billede img { object-fit: contain; }
+.fuldSkaerm .prikker button { border-color: var(--creme); }
+.fuldSkaerm .prikker button.valgt { background: var(--creme); }
+.fuldSkaerm .venstre { left: 14px; }
+.fuldSkaerm .hoejre { right: 14px; }
+.fuldSkaerm .forstoer { top: 14px; right: 14px; }
+
+/* Kontakt */
+.formular { display: grid; gap: 8px; }
+.formular label { margin-top: 12px; font-weight: 600; color: var(--skov); }
+.formular input, .formular textarea { width: 100%; padding: 16px 18px; border: var(--kant); border-radius: 8px; background: #fffaf0; font-size: 20px; }
+.formular input:focus, .formular textarea:focus { outline: none; border-color: var(--skov); }
+.formular .knap { margin-top: 18px; }
+.formular small { color: var(--gra); font-size: 16px; }
+.formular + h4 { margin: 44px 0 16px; }
+.stakFyld { display: flex; flex-direction: column; gap: 30px; }
+.kontaktGrid { gap: 80px; }
+.kontaktVenstre { display: flex; flex-direction: column; }
+.kontaktVenstre .toKolonner { gap: 30px; }
+.formular label:first-child { margin-top: 0; }
+.kontaktVenstre h4 { margin-top: auto; padding-top: 56px; }
+.stakFyld .oejeBoks { flex: 1; justify-content: center; }
+.infoBoks.oejeBoks { align-items: center; text-align: center; }
+.oeje { width: 100%; max-width: 200px; }
+.oejeHvid { fill: #fff; stroke: var(--guld); stroke-width: 4px; }
+.pupil { fill: var(--skov); transition: transform .5s ease-out; }
+
+/* Footer */
+.footer { margin-top: 80px; padding: 56px 0 24px; background: var(--gron); color: var(--creme); }
+.footer .bredde { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.3fr; gap: 30px; }
+.footer h4 { margin-bottom: 14px; color: var(--guld); font-size: 17px; letter-spacing: 1.5px; text-transform: uppercase; }
+.kolonne { padding-left: 30px; border-left: 1px solid rgba(246, 240, 225, .4); }
+.kolonne a, .kolonne span { display: block; margin-bottom: 10px; font-size: 19px; }
+.kolonne a:hover { color: var(--guld); }
+.kolonne i { width: 28px; }
+.footer small { grid-column: 1 / -1; padding-top: 18px; border-top: 1px solid rgba(200, 169, 107, .6); font-size: 16px; }
+
+
+/* Scroll-animation: kort og bokse tones ind, når man scroller ned til dem (JS skifter klasse) */
+.skjult { opacity: 0; transform: translateY(40px); }
+.tonerInd { animation: tonInd .8s ease-out backwards; }
+@keyframes tonInd { from { opacity: 0; transform: translateY(40px); } }
+
+/* Hvis man har slået animationer fra på sin computer, vises alt med det samme */
+@media (prefers-reduced-motion: reduce) {
+    .skjult { opacity: 1; transform: none; }
+    .tonerInd { animation: none; }
+    .loeb { animation: none; }
+}
+
+/* Simpel liste i stedet for kort: bruges til interesser og personlige egenskaber */
+.punktListe { display: grid; grid-template-columns: 1fr 1fr; gap: 0 70px; }
+.punkt { display: grid; grid-template-columns: 210px 1fr; gap: 20px; padding: 22px 0; border-top: var(--kant); transition: .3s; }
+.punkt:hover { border-color: var(--skov); }
+.punkt b { font-family: var(--fontOverskrift); font-size: var(--h4); color: var(--skov); }
+.punkt p { margin: 0; }
+
+/* Farvebånd: hele sektionen får en baggrund over hele skærmbredden, så siden ikke bliver én lang flade */
+.baandSage { background: var(--sage); }
+.baandMork { background: var(--skov); }
+.baandMork h2, .baandMork h3 { color: var(--creme); }
+.baandMork .titel p, .baandMork .opfordring p { color: var(--lysTekst); }
+.baandMork .overLinje { color: var(--guld); }
+.baandMork .kort h3 { color: var(--skov); }
+.footerTaet { margin-top: 0; }
+
+/* Håndskrevet tekst: bruges få steder til små kommentarer */
+.haand { font-family: var(--fontHaand); font-size: 32px; line-height: 1; color: var(--skov); }
+
+/* Kortene står en anelse skævt og forskudt, så rækkerne ikke ser ud som sat med lineal */
+.treKolonner .kort:nth-child(3n+1), .fireKolonner .kort:nth-child(3n+1), .toKolonner > .kort:nth-child(odd) { rotate: -.5deg; }
+.treKolonner .kort:nth-child(3n+2), .fireKolonner .kort:nth-child(3n+2), .toKolonner > .kort:nth-child(even) { rotate: .4deg; translate: 0 8px; }
+.treKolonner .kort:nth-child(3n), .fireKolonner .kort:nth-child(3n) { rotate: -.2deg; }
+.caseKort:nth-child(odd) { rotate: -.4deg; }
+.caseKort:nth-child(even) { rotate: .4deg; }
+
+/* Kontrolleret kaos: hårde skygger og mørke streger (se variablerne øverst), klistermærker og markør i overskrifter */
+h1 .guld { color: var(--skov); padding: 0 8px; background: linear-gradient(transparent 52%, var(--guld) 52%, var(--guld) 92%, transparent 92%); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+/* Klistermærke: lille skæv etiket. Placeres med position: absolute, hvor man vil have den */
+.maerke { position: absolute; z-index: 2; padding: 6px 16px; border: var(--kant); border-radius: 6px; background: var(--guld); color: var(--skov); font-family: var(--fontOverskrift); font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; box-shadow: var(--skyggeLille); rotate: -5deg; }
+.portraet .maerke { top: 26px; right: -22px; rotate: 6deg; }
+.caseKort { position: relative; }
+.caseKort .maerke { top: 18px; right: 18px; color: var(--skov); }
+.caseKort:nth-child(even) .maerke { rotate: 4deg; }
+
+/* På mørk baggrund skal den hårde skygge være guld, ellers kan man ikke se den */
+.baandMork .kort, .moerk, .caseKort { box-shadow: 6px 6px 0 var(--guld); }
+.baandMork .kort { border-color: var(--guld); }
+
+/* Løbende bånd: teksten står to gange, og hele rækken glider halvvejs til venstre og starter forfra, så det ser uendeligt ud */
+.loebRamme { margin: 10px 0 40px; padding: 24px 0; overflow: hidden; }
+.baandLoeb { overflow: hidden; border-block: var(--kant); background: var(--guld); rotate: -1.2deg; }
+.baandLoeb:hover .loeb { animation-play-state: paused; }
+.loeb { display: flex; width: max-content; animation: loeb 30s linear infinite; }
+.loeb span { padding: 12px 0; color: var(--skov); font-family: var(--fontOverskrift); font-size: 28px; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
+@keyframes loeb { to { transform: translateX(-50%); } }
+
+/* Skinnet er inspireret af lærerens eksempel foldable_glow_rotate (UCN, MMD), hvor en gradient flyttes med background-position. Jeg har lavet det om, så det sker ved hover. */
+/* Case-kort som spillekort: kortnummer og sjældenhed nederst, og et skin der glider hen over kortet ved hover */
+.caseKort::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, .35) 47%, rgba(200, 169, 107, .3) 53%, transparent 65%) 130% 0 / 260% 100% no-repeat; transition: background-position .9s; pointer-events: none; }
+.caseKort:hover::after { background-position: -30% 0; }
+.caseKort:hover { rotate: 1.5deg; }
+.caseKort:nth-child(even):hover { rotate: -1.5deg; }
+.kortFod { display: flex; justify-content: space-between; margin-top: auto; padding: 0 32px 22px; color: var(--lysTekst); font-size: 15px; letter-spacing: 1px; text-transform: uppercase; }
+.kortFod i { margin-left: 4px; }
+
+/* Kæde fra brugerdata til ændring: fem kort i en række, hvor overskrifterne har en pil mod det næste trin */
+.kaede { display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px; }
+.kaede .kort { padding: 26px; }
+.kaede .kort:not(:last-child) h4::after { content: " →"; color: var(--guld); }
